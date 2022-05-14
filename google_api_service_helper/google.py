@@ -104,6 +104,13 @@ class GoogleSpreadsheet:
         return self.service.spreadsheets().get(
             **params).execute()['sheets'][0]['data'][0]['rowData']
 
+    def clear_sheet_data(self, ss_id: str, range_sheet: str):
+        return self.service.spreadsheets().values().clear(
+            spreadsheetId=ss_id,
+            range=range_sheet,
+            body={},
+        ).execute()
+
 
 class GoogleDrive:
     FOLDER_LINK_PREFIX = 'https://drive.google.com/drive/folders/'
