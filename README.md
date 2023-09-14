@@ -1,3 +1,6 @@
-# google-api-service-helper
+# Google API Service Helper
 
-A simple helper for using Google API for Drive and Spreadsheets.
+Modules:
+
+- `GoogleDrive` for Google Drive API
+- `GoogleSheets` for Google Sheets API
